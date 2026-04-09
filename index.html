@@ -1235,7 +1235,7 @@ if (FIREBASE_CONFIGURED) {
       });
     });
 
-    db.ref('.info/connected').onValue(snap => {
+    db.ref('.info/connected').on(snap => {
       document.getElementById('offline-banner').classList.toggle('show', snap.val() !== true);
     });
 
