@@ -1191,7 +1191,7 @@ if (FIREBASE_CONFIGURED) {
     db = firebase.database();
 
     // Pull all state from Firebase in real time
-    db.ref('/').onValue(snap => {
+    db.ref('/').on('value', snap => {
       const raw = snap.val() || {};
 
       // Diff for animations
